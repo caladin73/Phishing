@@ -6,20 +6,17 @@
  * Time: 07:43
  */
 
-require_once( 'vendor/autoload.php' );
+require 'vendor/autoload.php';
 
-Autodesk\Auth\Configuration::getDefaultConfiguration()
-    ->setClientId( '<your-client-id>' )
-    ->setClientSecret( '<your-client-secret>' );
+//set this to false to use in production
+$sandbox = true;
 
-$twoLeggedAuth = new Autodesk\Auth\OAuth2\TwoLeggedAuth();
-$twoLeggedAuth->setScopes( [ 'bucket:read' ] );    //!<< This is dependent on what API you want to call.
+$oauth_handler = new \Evernote\Auth\OauthHandler($sandbox);
 
-$twoLeggedAuth->fetchToken();
+$key      = '%key%';
+$secret   = '%secret%';
+$callback = 'http://host/pathto/evernote-cloud-sdk-php/sample/oauth/index.php';
 
-$tokenInfo = [
-    'accessToken' => $twoLeggedAuth->getAccessToken(),
-    'expiry'           => time() + $twoLeggedAuth->getExpiresIn(),
-];
+$oauth_data  = $oauth_handler->authorize($key, $secret, $callback);
 
-print_r( $tokenInfo );
+echo "\nOauth Token : " . $oauth_data['oauth_token'];
