@@ -1,3 +1,8 @@
+body {
+    height:100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
@@ -10,6 +15,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    box-shadow: 3px 1px 5px #555;
 }
 
 /* The navigation menu links */
@@ -43,8 +49,17 @@
     font-size: 36px;
 }
 
+.sidebar {
+    position: fixed;
+    height:100%;
+    width: 85px;
+    background-color: #111;
+    box-shadow: 3px 1px 5px #555;
+}
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
+    margin-left: 85px;
     transition: margin-left .5s;
     padding: 20px;
 }
