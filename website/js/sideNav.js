@@ -1,9 +1,9 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "320px";
     document.getElementById("main").style.marginLeft = "270px";
     
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "320px";
     document.getElementById("main").style.marginLeft = "270px";
 }
 
@@ -18,12 +18,12 @@ function closeNav() {
 
 function initNav() {
 
-	var sideBar = $("#mySidenav");
+    var sideBar = $("#mySidenav");
 
-	$("#main").find("h2").each(function(index, element){
-		var el = $("#" + element.id);
-		sideBar.append("<a href='#" + element.id + "'>" + el.html() + "</a>");
-	});
+    $("#main").find("h2").each(function(index, element){
+        var el = $("#" + element.id);
+        sideBar.append("<a href='#" + element.id + "'>" + el.html() + "</a>");
+    });
 }
 
 initNav();
