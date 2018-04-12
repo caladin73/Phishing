@@ -1,5 +1,16 @@
 <?php
 
+require "autoload.php";
+
+$sandbox = true;
+$token = "S=s1:U=94895:E=16a0ddb3a1f:C=162b62a0d40:P=1cd:A=en-devtoken:V=2:H=e59a3207e1254f08803c6721ccfba652";
+$guid = "46521e13-f231-4dac-b28e-bc643a2a26d9";
+
+$client = new \Evernote\Client($token, $sandbox, null, null, false);
+$noteObject = $client->getNote($guid);
+$enml_note = $noteObject->content->toEnml();
+$note = htmlspecialchars_decode($enml_note);
+
 ?>
 
 <!doctype html>
@@ -40,12 +51,18 @@
 </div>
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
 <section class="page_content" id="main">
     <div class="hello">
         <h1>Hello, world!</h1>
         <a href="opt2"><h3>Option 1</h3></a>
     </div>
 </section>
+
+<div id="main">
+  <?php echo $note; ?>
+</div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
