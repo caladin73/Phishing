@@ -81,10 +81,13 @@ body {
 }
 
 #main{
-    margin-left: 7%;
-    margin-top: 1%;
+    text-align: center;
     transition: margin-left .5s;
-    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.main-title {
+    padding-top: 30px;
 }
 
 .page {
@@ -96,9 +99,10 @@ body {
     max-width: 1000px;
     padding: 2% 4%;
     overflow: hidden;
+    margin: 20px auto;
 }
 
-.page br:not(.new-line) {
+br:not(.new-line) {
     display: none;
 }
 

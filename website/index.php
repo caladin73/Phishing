@@ -28,7 +28,7 @@ $note = htmlspecialchars_decode($enml_note);
 
     <title>Hello, world!</title>
   </head>
-  <body id="top">
+<body>
 
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-angle-left"></i></a>
@@ -43,7 +43,7 @@ $note = htmlspecialchars_decode($enml_note);
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 
-<section class="page_content" id="main">
+<section class="" id="main">
     <!-- <div class="hello">
         <h1>Hello, world!</h1>
         <a href="opt2"><h3>Option 1</h3></a>
