@@ -1,5 +1,16 @@
 <?php
 
+require "autoload.php";
+
+$sandbox = true;
+$token = "S=s1:U=94895:E=16a0ddb3a1f:C=162b62a0d40:P=1cd:A=en-devtoken:V=2:H=e59a3207e1254f08803c6721ccfba652";
+$guid = "46521e13-f231-4dac-b28e-bc643a2a26d9";
+
+$client = new \Evernote\Client($token, $sandbox, null, null, false);
+$noteObject = $client->getNote($guid);
+$enml_note = $noteObject->content->toEnml();
+$note = htmlspecialchars_decode($enml_note);
+
 ?>
 
 <!doctype html>
@@ -38,7 +49,7 @@
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
-  <h1>Hello, world!</h1>
+  <?php echo $note; ?>
 </div>
 
     <!-- Optional JavaScript -->
