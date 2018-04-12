@@ -28,6 +28,14 @@ body {
     transition: 0.3s;
 }
 
+.sidenav a:nth-child(even) {
+    background-color: #222;
+}
+
+.sidenav a:nth-child(odd) {
+    background-color: #111;
+}
+
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
@@ -57,11 +65,45 @@ body {
     box-shadow: 3px 1px 5px #555;
 }
 
+#toTop {
+    position: absolute;
+    bottom: 25px;
+    background-color: #111;
+}
+
+.toTopSidebar {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
 #main{
     margin-left: 7%;
     margin-top: 1%;
     transition: margin-left .5s;
     padding: 20px;
+}
+
+.page {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-width: 1000px;
+    padding: 2% 4%;
+    overflow: hidden;
+}
+
+.page br:not(.new-line) {
+    display: none;
+}
+
+.page h2 {
+    margin: 5px 0px 35px;
 }
 
 .footer{

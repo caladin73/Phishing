@@ -30,46 +30,35 @@ $note = htmlspecialchars_decode($enml_note);
   </head>
   <body id="top">
 
-    <div id="mySidenav" class="sidenav">
+<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-angle-left"></i></a>
-
-  <?php
-    //foreach ($variable as $key => $value) {
-      # code...
-    //}
-  ?>
-  <a href="opt1"><i class="fas fa-angle-down"></i> Option nr. 1</a>
-  <a href="opt2"><i class="fas fa-angle-down"></i> Option nr. 2</a>
-  <a href="opt3"><i class="fas fa-angle-down"></i> Option nr. 3</a>
-  <a href="#top"><i class="fas fa-angle-up"></i> To Top</a>
-  
+  <a id="toTop" href="#top"><i class="fas fa-angle-up"></i> To Top</a>  
 </div>
 
 <div class="sidebar">
   <!-- Use any element to open the sidenav -->
   <a href="javascript:void(0)" class="openbtn" onclick="openNav()"><i class="fas fa-bars"></i></a>
+  <a id="toTop" class="toTopSidebar" href="#top"><i class="fas fa-angle-up"></i></a>
 </div>
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 
 <section class="page_content" id="main">
-    <div class="hello">
+    <!-- <div class="hello">
         <h1>Hello, world!</h1>
         <a href="opt2"><h3>Option 1</h3></a>
-    </div>
+    </div> -->
+    <?php echo $note; ?>
 </section>
 
-<div id="main">
-  <?php echo $note; ?>
-</div>
+<footer class="footer">Created by research group, to fool you, for you.</footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/sideNav.js"></script>
-  </body>
-  
-  <footer class="footer">Created by research group, to fool you, for you.</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/sideNav.js"></script>
+<script src="js/paper.js"></script>
+</body>
 </html>

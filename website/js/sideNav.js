@@ -15,3 +15,15 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "105px";
 }
+
+function initNav() {
+
+	var sideBar = $("#mySidenav");
+
+	$("#main").find("h2").each(function(index, element){
+		var el = $("#" + element.id);
+		sideBar.append("<a href='#" + element.id + "'>" + el.html() + "</a>");
+	});
+}
+
+initNav();
