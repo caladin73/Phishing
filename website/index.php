@@ -49,9 +49,9 @@ $note = htmlspecialchars_decode($enml_note);
         <a href="opt2"><h3>Option 1</h3></a>
     </div> -->
     <?php echo $note; ?>
-</section>
 
-<footer class="footer">Created by research group, to fool you, for you.</footer>
+    <footer class="footer">Created by research group, to fool you, for you.</footer>
+</section>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -111,10 +111,7 @@ br:not(.new-line) {
 }
 
 .footer{
-    margin-left: 40%;
     text-align: center;
-    position: fixed;
-    top: 94%;
 }
 
 .page_content {
