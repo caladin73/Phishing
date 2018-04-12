@@ -57,15 +57,38 @@ body {
     box-shadow: 3px 1px 5px #555;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-    margin-left: 85px;
+#main{
+    margin-left: 7%;
+    margin-top: 1%;
     transition: margin-left .5s;
     padding: 20px;
 }
 
+.footer{
+    margin-left: 40%;
+    text-align: center;
+    position: fixed;
+    top: 94%;
+}
+
+.page_content {
+    height: auto; /* 100% Full-height */
+    width: 90%; /* 0 width - change this with JavaScript */
+    
+    
+    position: fixed; /* Stay in place */
+    top: 0; /* Stay at the top */
+    background-color: lightgray; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    box-shadow: 1px 1px 5px #555;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+    .sidenav {padding-top: 50px;}
     .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 850px) {
+    .footer {margin-left: 22%;}
 }

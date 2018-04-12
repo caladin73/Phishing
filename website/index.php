@@ -27,8 +27,11 @@
       # code...
     //}
   ?>
-
+  <a href="opt1"><i class="fas fa-angle-down"></i> Option nr. 1</a>
+  <a href="opt2"><i class="fas fa-angle-down"></i> Option nr. 2</a>
+  <a href="opt3"><i class="fas fa-angle-down"></i> Option nr. 3</a>
   <a href="#top"><i class="fas fa-angle-up"></i> To Top</a>
+  
 </div>
 
 <div class="sidebar">
@@ -37,10 +40,12 @@
 </div>
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-<div id="main">
-  <h1>Hello, world!</h1>
-</div>
-
+<section class="page_content" id="main">
+    <div class="hello">
+        <h1>Hello, world!</h1>
+        <a href="opt2"><h3>Option 1</h3></a>
+    </div>
+</section>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -48,4 +53,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/sideNav.js"></script>
   </body>
+  
+  <footer class="footer">Created by research group, to fool you, for you.</footer>
 </html>
